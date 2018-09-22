@@ -1,0 +1,235 @@
+$padding1: 22px;
+
+header{
+	width: 30%;
+	background-color: $main;
+	color: $secondary;
+	padding: $padding1 0;
+	 
+	@include breakpoint($breakpoint2) {
+		padding: 13px 0;
+		width: 100%;
+		position: fixed; 
+		z-index: 400; 
+	}
+	
+	a{
+		color: $secondary;
+		font-size: $fontsizeM; 
+		text-decoration: none;
+		margin-bottom: 15px; 
+		font-family: $headline;
+		
+		svg{
+			width: 100%;
+			height: 100%;  
+		} 
+	
+		@include breakpoint($breakpoint1) {
+			font-size: $fontsizeS; 
+		}
+
+		@include breakpoint($breakpoint2) {
+			font-size: $fontsizeM; 
+			margin-bottom: 20px;
+		}
+	}
+	
+		
+	.logo{
+		padding: 0 $padding1;
+		margin-bottom: 20px;
+		display: flex;
+		
+		@include breakpoint($breakpoint2) {
+			margin-bottom: 0;
+			justify-content: space-between;
+		}
+		
+		a{
+			margin: 0 auto;
+
+			@include breakpoint($breakpoint2) {
+				height: 50px;
+				width: auto;
+				display: inline-block;
+				margin-bottom: 0; 
+			}
+
+			svg{
+				 
+				@include breakpoint($breakpoint2) {
+					width: auto;
+					height: 100%;
+				}
+			}
+		}
+
+		.mobile-nav{
+			display: none;
+			position: relative;
+			width: 50px;
+			height: 50px;
+			cursor: pointer;  
+
+			@include breakpoint($breakpoint2) {
+				display: block;
+			}
+
+			.line{
+				position: absolute;
+				display: block;
+				background-color: $secondary;
+				width: 100%;
+				height: 3px;
+				top: auto;
+				bottom: auto;
+				left: auto;
+				right: auto;
+				
+				&:first-of-type{
+					top: 15px;
+					left: 0;
+				}
+
+				&:last-of-type{
+					bottom: 15px;
+					left: 0;
+				}
+			}
+
+			&.open{
+				
+				.line:first-of-type{
+					transform: rotate(45deg) translate(0, 12px);
+				}
+
+				.line:last-of-type{
+					transform: rotate(-45deg) translate(0, -12px);
+				}
+			}
+		}
+	}
+
+	.nav-section{
+
+		&.stick{
+			position: fixed !important;
+			width: 30%;
+			top: $padding1;
+			left: 0;
+		}
+		
+		.social-nav{
+			padding: 0 $padding1;
+			display: flex;
+			justify-content: space-around;
+			margin-bottom: 15px;
+			
+			a{
+				display: inline-block;
+				height: 4vw; 
+				max-height: 55px;
+				
+				&:hover{
+					transform: translate(0px, -10px);
+				}
+				
+				@include breakpoint($breakpoint2) {
+					height: 40px;
+				}
+			}
+		}
+
+		.main-nav{
+			margin-bottom: 30px;
+			
+			a{
+				display: block;
+				width: 100%; 
+				padding: 7.5px $padding1;
+				margin-bottom: 0; 
+				
+				&:hover{
+					background-color: $black; 
+				}
+			}
+		}
+
+		.info{
+			padding: 0 $padding1; 
+			
+			a{
+				display: block;
+				width: 100%; 
+				font-size: $fontsizeS;
+				font-family: $body;
+				color: $tertiary;
+				
+				&:hover{
+					text-decoration: underline;
+				}
+				
+				@include breakpoint($breakpoint1) {
+					font-size: $fontsizeXS; 
+				}
+
+				@include breakpoint($breakpoint2) {
+					font-size: $fontsizeS; 
+				}
+			}
+		}
+
+		@include breakpoint($breakpoint2) {
+			position: fixed;
+			top: 75px;
+			left: 100%;
+			background-color: $main; 
+			z-index: 3;
+			width: 300px; 
+			padding: $padding1 0;
+		}
+	}
+
+	.featured-link{
+		position: fixed;
+		left: $padding1;
+		bottom: $padding1;
+		
+		@include breakpoint($breakpoint2) {
+			display: none;
+		}
+		
+		a{
+			display: block;
+			font-size: $fontsizeS;
+			font-family: $body;
+			color: $secondary;
+			vertical-align: middle;
+			height: 25px;
+			display: flex;
+			align-items: center;
+			margin-bottom: 0;
+			
+			@include breakpoint($breakpoint1) {
+				font-size: $fontsizeXS; 
+				height: 20px; 
+			}
+			
+			&:hover{
+				text-decoration: underline;
+			}
+			
+			span{
+				display: inline-block;
+				margin-right: 0.5em;
+			}
+
+			svg{
+				display: inline-block;
+				width: auto;
+				height: 100%;
+			}
+		}
+	}
+}

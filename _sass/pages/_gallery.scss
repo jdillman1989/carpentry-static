@@ -1,0 +1,53 @@
+.gallery-carousel{
+	padding: 15px 0; 
+	margin-bottom: 15px; 
+	
+	.carousel-container{
+		width: 100%; 
+		
+		.carousel-item{
+			width: 100%;
+			 
+			.carousel-item-container{
+				margin: 0 auto; 
+			}
+		}
+
+		.carousel-nav{
+			width: 40%;
+			margin: 0 auto; 
+			display: flex;
+			justify-content: space-between;
+			
+			@include breakpoint($breakpoint1) {
+				width: 60%; 
+			}
+
+			@include breakpoint($breakpoint2) {
+				width: 50%; 
+			}
+
+			@include breakpoint($breakpoint3) {
+				width: 70%; 
+			}
+			 
+			.carousel-pip{
+				width: 15px;
+				height: 15px;
+				border-radius: 15px;
+				opacity: 0.3; 
+				background-color: $tertiary; 
+				cursor: pointer;
+				z-index: 300; 
+				
+				&.cycle-pager-active{
+					opacity: 1; 
+				}
+			}
+		}
+	}
+}
+
+.gallery-content{
+	padding: 15px 0 0 0;
+}
