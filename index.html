@@ -1,28 +1,18 @@
 ---
-layout: page
-title: Top Schools in Michigan
-image: /assets/images/header.jpg
+layout: gallery
+title: Custom Carpentry &#038; Remodeling
+subtitle: CUSTOM CABINETS • FURNITURE • BUILT-INS • TRIM
 ---
-
-{% for ranking in site.data.rankings %}
-	<article class="ranking">
-		<div class="ranking-header">
-			<h2>{{ ranking[0] }}</h2>
-		</div>
-		{% assign this_ranking = site.colleges | where_exp: "item", "item.rankings contains ranking[0]" %}
-		{% assign sorted = this_ranking | sort: "score" | reverse %}
-		{% for college in sorted %}
-			<div class="accordion-item">
-				<div class="accordion-toggle">
-					<h3>{{ college.title }}</h3>
-					<div class="accordion-icon"><p>+</p></div>
-				</div>
-				<div class="accordion-content">
-					<p><strong>Score:</strong> {{ college.score }}</p>
-					{{ college.content }}
-					<a href="{{ college.url }}" class="fr-button">Request Info</a>
-				</div>
-			</div>
-		{% endfor %}
-	</article>
-{% endfor %}
+<div class="home-image" style="background-image:url(/assets/images/564_DSC00016-001.jpg); background-size:cover; background-position:center center;"></div>
+<div class="home-image" style="background-image:url(/assets/images/IMG_0954.jpg); background-size:cover; background-position:center center;"></div>
+<div class="home-image" style="background-image:url(/assets/images/DSCN0362.jpg); background-size:cover; background-position:center center;"></div>
+<div class="home-image" style="background-image:url(/assets/images/DSCN0328.jpg); background-size:cover; background-position:center center;"></div>
+<div class="home-image" style="background-image:url(/assets/images/DSCN0290.jpg); background-size:cover; background-position:center center;"></div>
+<div class="home-image" style="background-image:url(/assets/images/DSCN0263.jpg); background-size:cover; background-position:center center;"></div>
+<div class="home-image" style="background-image:url(/assets/images/DSC08843-001.jpg); background-size:cover; background-position:center center;"></div>
+<div class="home-image" style="background-image:url(/assets/images/DSCN0369.jpg); background-size:cover; background-position:center center;"></div>
+<div class="home-image" style="background-image:url(/assets/images/453_Nymeyer_fireplace.jpg); background-size:cover; background-position:center center;"></div>
+<div class="home-image" style="background-image:url(/assets/images/Billiards-Rack.jpg); background-size:cover; background-position:center center;"></div>
+<div class="home-image" style="background-image:url(/assets/images/DSCN0248.jpg); background-size:cover; background-position:center center;"></div>
+<div class="home-image" style="background-image:url(/assets/images/285_Cindy_Recker_7_.jpg); background-size:cover; background-position:center center;"></div>
+<div class="home-image" style="background-image:url(/assets/images/DSC09962.jpg); background-size:cover; background-position:center center;"></div>
